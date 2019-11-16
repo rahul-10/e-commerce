@@ -1,0 +1,26 @@
+{
+  "name": "ecommerse",
+  "version": "1.0.0",
+  "description": "E-commerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "migrate:up": "./node_modules/knex/bin/cli.js --knexfile=./src/configs/knexfile.js migrate:latest",
+    "migrate:down": "./node_modules/knex/bin/cli.js --knexfile=./src/configs/knexfile.js migrate:rollback",
+    "seed:run": "./node_modules/knex/bin/cli.js --knexfile=./src/configs/knexfile.js seed:run"
+  },
+  "author": "Rahul Dubey",
+  "license": "ISC",
+  "devDependencies": {
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-promise-router": "^3.0.3",
+    "knex": "^0.20.1",
+    "knex-postgis": "^0.8.1",
+    "pg": "^7.12.1"
+  }
+}
