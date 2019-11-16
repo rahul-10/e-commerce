@@ -50,7 +50,6 @@ const getProductList = async (obj) => {
 }
 
 exports.getList = async (req, res) => {
-  // const {search, limit, offset } = req.params;
   const finelOut = await getProductList(req.query);
   return sendResponse(req, res, 200, { list: finelOut });
 }
@@ -62,8 +61,6 @@ exports.getVariantDetail = async (req, res) => {
     throw error(404, 'Product not found');
   }
 
-  // const { variants, variantsOptions } = await variantModel.getVariantList({ product_id: product.id });
   const finelOut = await getProductList({ product_id: product.product_id });
   return sendResponse(req, res, 200, { variationList: finelOut });
-  // return sendResponse(req, res, 200, { variationList: 'list' })
 }

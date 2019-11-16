@@ -13,4 +13,20 @@ Apis:
   ptional query params: search=apple&color=white&storage=128&limit=55&offset=0
 
 2. To Get Variant details
-  path: api/details/:variant_id
+  path: /api/details/:variant_id
+
+3. Internal API (to add variant of a product)
+    path : /api/internal/add/variant
+    Method: POST
+    body when product has variant: { 
+      "product_id": product_id,
+      "is_varient": true,
+      "variant": "variant name",
+      "options": [option_id, option_id], // all the option ids of that variant
+      "price": "price"
+    }
+    body when product doesn't have variant: { 
+      "product_id": "product_id",
+      "is_varient": false,
+      "price": "price"
+    }
