@@ -15,9 +15,9 @@
   "devDependencies": {
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-promise-router": "^3.0.3",
     "knex": "^0.20.1",
     "knex-postgis": "^0.8.1",
